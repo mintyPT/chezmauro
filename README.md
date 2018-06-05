@@ -4,7 +4,7 @@ This is a small crawler for the menu at [link](http://www.maurotraiteur.com/menu
 
 This small library exposes 2 functions:
 
-- `fetchWeekMenu` - to fetch the complete menu
+- `fetchWeeksMenu` - to fetch the complete menu
 - `fetchTodaysMenu` - to fetch today's menu
 
 - - -

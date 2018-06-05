@@ -5,7 +5,7 @@ const moment = require('moment');
 
 const days = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
 
-const fetchWeekMenu = async () => {
+const fetchWeeksMenu = async () => {
   const content = await rp('http://www.maurotraiteur.com/menus-du-jour-service-traiteur-specialite-italienne-lausanne/');
 
   const res = confession.confess(content, {
@@ -27,7 +27,7 @@ const fetchWeekMenu = async () => {
 };
 
 const fetchTodaysMenu = async () => {
-  const menu = await fetchWeekMenu();
+  const menu = await fetchWeeksMenu();
   const date = moment();
   const dow = date.day();
   const strDow = days[dow];
@@ -37,6 +37,6 @@ const fetchTodaysMenu = async () => {
 
 
 module.exports = {
-  fetchWeekMenu,
+  fetchWeeksMenu,
   fetchTodaysMenu,
 };
